@@ -7,8 +7,10 @@ namespace FlutterCliMcpServer.Tools;
 [McpServerToolType]
 public class FlutterCliTools
 {
+
+    [McpServerTool, Description("Create flutter project with specified project name for specified platforms")]
     public static string CreateFlutterProjectForSpecifiedPLatforms([Description("Project Name")] string projectName,
-        [Description("Platforms")] string platforms)
+            [Description("Platforms")] string platforms)
     {
         string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
 
