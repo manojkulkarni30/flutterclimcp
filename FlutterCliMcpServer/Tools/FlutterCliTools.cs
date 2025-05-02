@@ -86,7 +86,7 @@ public class FlutterCliTools
     }
 
     [McpServerTool, Description("Create flutter project with specified project name for specified platforms")]
-    public static string CreateFlutterProjectForSpecifiedPLatforms([Description("Project Name")] string projectName,
+    public static string CreateFlutterProjectForSpecifiedPlatforms([Description("Project Name")] string projectName,
             [Description("Platforms")] string platforms)
     {
         return CreateProject(projectName, platforms);
