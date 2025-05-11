@@ -11,7 +11,7 @@ public class FlutterCliTools
     {
         string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
 
-        var projectPath = Path.Combine(path, projectName);
+        var projectPath = Path.Combine(path, FormatProjectName(projectName));
         try
         {
             // Step 1: Check if the project already exists
@@ -83,6 +83,11 @@ public class FlutterCliTools
         {
             return $"Project Creation Failed: {ex.Message}";
         }
+    }
+
+    private static string FormatProjectName(string projectName)
+    {
+        return projectName.Replace(" ", "_").ToLower();
     }
 
     [McpServerTool, Description("Create flutter project with specified project name for specified platforms")]
